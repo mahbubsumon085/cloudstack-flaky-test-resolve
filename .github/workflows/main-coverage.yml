@@ -58,9 +58,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-   
+          git clone https://github.com/shapeblue/cloudstack-nonoss.git nonoss
+          cd nonoss && bash -x install-non-oss.sh && cd ..
+
           # Additional Maven command 1
           sudo mvn clean install -DskipTests -pl server -am
 
           # Additional Maven command 2
           sudo mvn -pl server test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+
+          # Additional Maven command 3
+          sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully 
+       
