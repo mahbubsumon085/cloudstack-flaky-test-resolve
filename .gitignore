@@ -66,6 +66,7 @@ target-eclipse
 .classpath
 .settings.xml
 .settings/
+.nondex/
 db.properties.override
 replace.properties.override
 tools/marvin/marvin/cloudstackAPI/*
