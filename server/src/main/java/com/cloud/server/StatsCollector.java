@@ -182,6 +182,7 @@ import com.codahale.metrics.jvm.GarbageCollectorMetricSet;
 import com.codahale.metrics.jvm.MemoryUsageGaugeSet;
 import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
 import com.sun.management.OperatingSystemMXBean;
@@ -2171,7 +2172,8 @@ public class StatsCollector extends ManagerBase implements ComponentMethodInterc
                 statsForCurrentIteration.getNetworkWriteKBs(), statsForCurrentIteration.getNumCPUs(), statsForCurrentIteration.getDiskReadKBs(),
                 statsForCurrentIteration.getDiskWriteKBs(), statsForCurrentIteration.getDiskReadIOs(), statsForCurrentIteration.getDiskWriteIOs(),
                 statsForCurrentIteration.getEntityType());
-        VmStatsVO vmStatsVO = new VmStatsVO(statsForCurrentIteration.getVmId(), msId, timestamp, gson.toJson(vmStats));
+        Gson gsonInner = new GsonBuilder().registerTypeAdapter(VmStatsEntryBase.class, new VmStatsEntryBaseJsonSerializer()).create();
+        VmStatsVO vmStatsVO = new VmStatsVO(statsForCurrentIteration.getVmId(), msId, timestamp, gsonInner.toJson(vmStats));
         LOGGER.trace(String.format("Recording VM stats: [%s].", vmStatsVO.toString()));
         vmStatsDao.persist(vmStatsVO);
     }
