@@ -1,0 +1,518 @@
+##### Finding the first flaky commit
+
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git checkout 64262d943f012c40deac3cd87c67d44fdc727b52
+HEAD is now at 64262d943f Merge branch '4.17'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect start
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git log --reverse
+commit 2b78b78272f79c1197e54bec7bc2ae56d51e779e
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:25 2010 -0700
+
+    Initial commit: adding .gitignore
+
+commit 05c020e1f6679edb74ef9ee513fc6240db981139
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:29 2010 -0700
+
+    Source code committed
+
+commit 9d5c1f2dcfcfe33179c2203c4e899e8220225cc8
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:29 2010 -0700
+
+    Fix build system in preparation for repo split
+
+commit ac730ec496fdf3b9d82c409210cbebcde427673b
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:42 2010 -0700
+
+    Branch 2.1.refactor committed
+
+commit df5aa16f3c7a674e29d38f31c0c8489b921e88e9
+Merge: ac730ec496 9d5c1f2dcf
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:42 2010 -0700
+
+    Merge branch 'master' into 2.1.refactor
+
+commit 3318f6dcb41ca65fd565d952da0dd1cfeee1da29
+Author: Alex Huang <alex@cloud.com>
+Date:   Wed Aug 11 09:41:15 2010 -0700
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good 2b78b78272f79c1197e54bec7bc2ae56d51e779e
+Bisecting: 17614 revisions left to test after this (roughly 14 steps)
+[df0919bef589bf44d23f9d9e056fe0da9a579034] Add placeholder network ACL list view
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 8807 revisions left to test after this (roughly 13 steps)
+[945cc0bcfbd1f797ec6c4e15099d73fc55d478d0] Aligning router chain names correctly
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 4403 revisions left to test after this (roughly 12 steps)
+[6d5c61b7bc6083594d2505a50fec9267d4250a87] Fix ajaxviewer.js to solve console on Firefox (#1655)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 2201 revisions left to test after this (roughly 11 steps)
+[f320728eddf132667c5d0acbc9389873438ff45a] update packages and dependencies
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 1100 revisions left to test after this (roughly 10 steps)
+[446337b4cccf4ef871426a432e2dbcd4c15678c1] Fix of shrinking volumes with QCOW2 format (#5225)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 549 revisions left to test after this (roughly 9 steps)
+[99313f8eae1ee1425f9c7097ccc006b50a58c532] Merge branch '4.16' into main
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 274 revisions left to test after this (roughly 8 steps)
+[3354f817eb6e2a993980f5f6e14b54947f808cef] Merge branch '4.16'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 137 revisions left to test after this (roughly 7 steps)
+[976464ccb9f7de8c5e3579d23d6247743f70e4ee] .github: enable fork-point while finding list of changes files
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 68 revisions left to test after this (roughly 6 steps)
+[306baea228dcc20a4e45cf110378ef0e64f1ae71] Merge branch '4.16'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[177f04839c2a598cc7ca9a94985cb4b80827575d] UI: Fix protocol reset after changing provider on Add Primary Storage (#6243)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 16 revisions left to test after this (roughly 4 steps)
+[daa7bdb0461adf520f4c8030f5f540c1cbbb5707] upgrade: update minreq.sysvmtemplate.version to the latest template  version (#6227)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[8add4df0faa66ac0ea2ed671d325d6d4596b2b30] .github: fix github actions error
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[16f2896940cb6ae5557a51b6b439bd71917e1781] Persistence of VM stats (#5984)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[e0ce0228cc01f667f36999cb6cf225a24a7deb86] ui: Fix Add secondary storage (#6241)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[1b46635947b0cdc824c4466440419779e836d5af] Merge remote-tracking branch 'origin/4.16' into main
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+16f2896940cb6ae5557a51b6b439bd71917e1781 is the first bad commit
+commit 16f2896940cb6ae5557a51b6b439bd71917e1781
+Author: José Flauzino <jose.wilson.vf@gmail.com>
+Date:   Mon Apr 11 10:42:21 2022 -0300
+
+    Persistence of VM stats (#5984)
+    
+    * Add persistence of VM stats
+    
+    * Fix API 'since' attribute
+    
+    * Add license
+    
+    * Address GutoVeronezi's reviews
+    
+    * Fix the order of VM stats in the API response
+    
+    * Fix msid in VM stats data
+    
+    * Fix disk stats and add minor improvements
+    
+    * Add log message
+    
+    * Build string using ReflectionToStringBuilderUtils
+    
+    * Rerun checks
+    
+    Co-authored-by: joseflauzino <jose@scclouds.com.br>
+
+ .../org/apache/cloudstack/api/ApiArgValidator.java |  16 +-
+ .../org/apache/cloudstack/api/ApiConstants.java    |   1 +
+ .../cloudstack/api/command/user/vm/ListVMsCmd.java |   9 +
+ .../cloudstack/api/response/StatsResponse.java     | 147 ++++++++++
+ .../cloudstack/api/response/StatsResponseTest.java | 135 +++++++++
+ .../java/com/cloud/agent/api/VmStatsEntry.java     | 159 ++---------
+ .../java/com/cloud/agent/api/VmStatsEntryBase.java | 192 +++++++++++++
+ .../src/main/java/com/cloud/vm/VmStatsVO.java      |  87 ++++++
+ .../src/main/java/com/cloud/vm/dao/VmStatsDao.java |  82 ++++++
+ .../main/java/com/cloud/vm/dao/VmStatsDaoImpl.java | 122 ++++++++
+ .../spring-engine-schema-core-daos-context.xml     |   1 +
+ .../resources/META-INF/db/schema-41610to41700.sql  |  13 +
+ .../com/cloud/agent/manager/MockVmManagerImpl.java |   2 +-
+ .../hypervisor/vmware/resource/VmwareResource.java |   8 +-
+ .../xenserver/resource/CitrixResourceBase.java     |   2 +-
+ .../apache/cloudstack/api/ListVMsMetricsCmd.java   |  14 +
+ .../cloudstack/api/ListVMsUsageHistoryCmd.java     | 100 +++++++
+ .../apache/cloudstack/metrics/MetricsService.java  |   5 +
+ .../cloudstack/metrics/MetricsServiceImpl.java     | 201 ++++++++++++-
+ .../response/VmMetricsStatsResponse.java           |  62 ++++
+ .../cloudstack/metrics/MetricsServiceImplTest.java | 314 +++++++++++++++++++++
+ server/src/main/java/com/cloud/api/ApiDBUtils.java |  10 +-
+ .../com/cloud/api/dispatch/ParamProcessWorker.java |  65 +++--
+ .../java/com/cloud/api/query/QueryManagerImpl.java |   2 +-
+ .../com/cloud/api/query/ViewResponseHelper.java    |  10 +-
+ .../com/cloud/api/query/dao/UserVmJoinDao.java     |   2 +-
+ .../com/cloud/api/query/dao/UserVmJoinDaoImpl.java |   4 +-
+ .../main/java/com/cloud/server/StatsCollector.java | 216 +++++++++-----
+ .../main/java/com/cloud/vm/UserVmManagerImpl.java  |   7 +-
+ .../java/com/cloud/server/StatsCollectorTest.java  | 153 ++++++++--
+ .../AccountManagerImplVolumeDeleteEventTest.java   |   6 +-
+ ui/src/config/section/compute.js                   |   7 +
+ 32 files changed, 1858 insertions(+), 296 deletions(-)
+ create mode 100644 api/src/main/java/org/apache/cloudstack/api/response/StatsResponse.java
+ create mode 100644 api/src/test/java/org/apache/cloudstack/api/response/StatsResponseTest.java
+ create mode 100644 core/src/main/java/com/cloud/agent/api/VmStatsEntryBase.java
+ create mode 100644 engine/schema/src/main/java/com/cloud/vm/VmStatsVO.java
+ create mode 100644 engine/schema/src/main/java/com/cloud/vm/dao/VmStatsDao.java
+ create mode 100644 engine/schema/src/main/java/com/cloud/vm/dao/VmStatsDaoImpl.java
+ create mode 100644 plugins/metrics/src/main/java/org/apache/cloudstack/api/ListVMsUsageHistoryCmd.java
+ create mode 100644 plugins/metrics/src/main/java/org/apache/cloudstack/response/VmMetricsStatsResponse.java
+ create mode 100644 plugins/metrics/src/test/java/org/apache/cloudstack/metrics/MetricsServiceImplTest.java
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git checkout 16f2896940cb6ae5557a51b6b439bd71917e1781
+Previous HEAD position was 1b46635947 Merge remote-tracking branch 'origin/4.16' into main
+HEAD is now at 16f2896940 Persistence of VM stats (#5984)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 
+
+
+
+
+
+#### partial Log for sudo mvn clean install -DskipTests -pl server -am 
+
+
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 451 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 145 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-server ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/cloud-server-4.17.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-server ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-server ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/cloud-server-4.17.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-server/4.17.0.0-SNAPSHOT/cloud-server-4.17.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-server/4.17.0.0-SNAPSHOT/cloud-server-4.17.0.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache CloudStack 4.17.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache CloudStack Developer Tools - Checkstyle Configuration SUCCESS [  0.682 s]
+[INFO] Apache CloudStack .................................. SUCCESS [  0.908 s]
+[INFO] Apache CloudStack Framework - Managed Context ...... SUCCESS [  2.559 s]
+[INFO] Apache CloudStack Framework ........................ SUCCESS [  0.054 s]
+[INFO] Apache CloudStack Framework - Certificate Authority  SUCCESS [  0.677 s]
+[INFO] Apache CloudStack Utils ............................ SUCCESS [  6.813 s]
+[INFO] Apache CloudStack Framework - Database ............. SUCCESS [  4.208 s]
+[INFO] Apache CloudStack Framework - Configuration ........ SUCCESS [  2.721 s]
+[INFO] Apache CloudStack Framework - Direct Download to Primary Storage SUCCESS [  0.520 s]
+[INFO] Apache CloudStack API .............................. SUCCESS [  9.312 s]
+[INFO] Apache CloudStack Framework - REST ................. SUCCESS [  1.665 s]
+[INFO] Apache CloudStack Framework - IPC .................. SUCCESS [  3.171 s]
+[INFO] Apache CloudStack Cloud Engine ..................... SUCCESS [  0.063 s]
+[INFO] Apache CloudStack Cloud Engine API ................. SUCCESS [  3.068 s]
+[INFO] Apache CloudStack Cloud Engine Schema Component .... SUCCESS [ 11.839 s]
+[INFO] Apache CloudStack Framework - Security ............. SUCCESS [  1.706 s]
+[INFO] Apache CloudStack Core ............................. SUCCESS [  5.380 s]
+[INFO] Apache CloudStack Framework - Clustering ........... SUCCESS [  2.805 s]
+[INFO] Apache CloudStack Framework - Event Notification ... SUCCESS [  1.137 s]
+[INFO] Apache CloudStack Framework - Jobs ................. SUCCESS [  3.371 s]
+[INFO] Apache CloudStack Cloud Engine Internal Components API SUCCESS [  2.240 s]
+[INFO] Apache CloudStack Agent Management Servers Load Balancer SUCCESS [  0.572 s]
+[INFO] Apache CloudStack Framework - Storage Config Drive Component SUCCESS [  2.705 s]
+[INFO] Apache CloudStack Server ........................... SUCCESS [ 19.273 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:28 min
+[INFO] Finished at: 2024-01-07T17:53:34+06:00
+[INFO] ------------------------------------------------------------------------
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 
+
+#### log for test without nondex (sudo mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully)
+
+
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ sudo mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTe
+st#persistVirtualMachineStatsTestPersistsSuccessfully
+[sudo] password for sumon: 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.17.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-server ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.081 s - in com.cloud.server.StatsCollectorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.900 s
+[INFO] Finished at: 2024-01-07T18:10:46+06:00
+[INFO] ------------------------------------------------------------------------
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/clo 
+
+
+#### log for test with nondex (sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully )
+
+
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.17.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> nondex-maven-plugin:2.1.1:nondex (default-cli) > test-compile @ cloud-server >>>
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< nondex-maven-plugin:2.1.1:nondex (default-cli) < test-compile @ cloud-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- nondex-maven-plugin:2.1.1:nondex (default-cli) @ cloud-server ---
+INFO: The original argline is: -Djava.security.egd=file:/dev/./urandom -noverify
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=.nondex
+nondexExecid=clean_SMnsVhnu0zTFIypFaWYi0GOQoScu9D3P0rLgOfNxQ=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.224 s - in com.cloud.server.StatsCollectorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.81 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.806 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[diskWriteIOs":13.0,"diskReadIOs":12.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"vmId":2,"networkReadKBs":7.0,"diskReadKBs":10.0,"memoryKBs":3.0,"diskWriteKBs":11.0,"cpuUtilization":6.0,"numCPUs":9,"entityType":"vm","intFreeMemoryKBs":4.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:300)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:300 expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[diskWriteIOs":13.0,"diskReadIOs":12.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"vmId":2,"networkReadKBs":7.0,"diskReadKBs":10.0,"memoryKBs":3.0,"diskWriteKBs":11.0,"cpuUtilization":6.0,"numCPUs":9,"entityType":"vm","intFreeMemoryKBs":4.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4=
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=6LCvynCadU4x0yetR78R84+zimVXTaiFxRIw7PuQla8=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.78 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.777 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"vmId":2,"[cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"vmId":2,"[networkWriteKBs":8.0,"entityType":"vm","diskReadIOs":12.0,"diskWriteIOs":13.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"cpuUtilization":6.0,"networkReadKBs":7.0,"diskReadKBs":10.0,"numCPUs":9,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:300)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:300 expected:<{"vmId":2,"[cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"vmId":2,"[networkWriteKBs":8.0,"entityType":"vm","diskReadIOs":12.0,"diskWriteIOs":13.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"cpuUtilization":6.0,"networkReadKBs":7.0,"diskReadKBs":10.0,"numCPUs":9,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for 6LCvynCadU4x0yetR78R84+zimVXTaiFxRIw7PuQla8=
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1016066
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=Hjceg5tF5G90FY79RMj3A0WBEy1bmjSJiPXKmtOjSqo=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.864 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.859 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[intFreeMemoryKBs":4.0,"entityType":"vm","numCPUs":9,"memoryKBs":3.0,"networkReadKBs":7.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"cpuUtilization":6.0,"targetMemoryKBs":5.0,"vmId":2,"networkWriteKBs":8.0,"diskWriteKBs":11.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:300)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:300 expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[intFreeMemoryKBs":4.0,"entityType":"vm","numCPUs":9,"memoryKBs":3.0,"networkReadKBs":7.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"cpuUtilization":6.0,"targetMemoryKBs":5.0,"vmId":2,"networkWriteKBs":8.0,"diskWriteKBs":11.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for Hjceg5tF5G90FY79RMj3A0WBEy1bmjSJiPXKmtOjSqo=
+[INFO] NonDex SUMMARY:
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=6LCvynCadU4x0yetR78R84+zimVXTaiFxRIw7PuQla8= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=Hjceg5tF5G90FY79RMj3A0WBEy1bmjSJiPXKmtOjSqo= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] All tests pass without NonDex shuffling
+[INFO] ####################
+[INFO] Across all seeds:
+[INFO] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] Test results can be found at: 
+[INFO] file:///home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex/pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4=/test_results.html
+[INFO] [NonDex] The id of this run is: pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4=
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.403 s
+[INFO] Finished at: 2024-01-07T18:13:18+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal edu.illinois:nondex-maven-plugin:2.1.1:nondex (default-cli) on project cloud-server: Unable to execute mojo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex/pcqcG5I3Q65aMPR05felfF5WS9DiBfs6JLfQEbVc4= for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 

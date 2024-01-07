@@ -1,0 +1,1322 @@
+########## log for sudo mvn clean install -DskipTests -pl server -am 
+
+
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-ca ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ca/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-ca ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-ca ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-ca ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ca/target/cloud-framework-ca-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-ca ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-ca ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ca/target/cloud-framework-ca-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-ca/4.18.0.0-SNAPSHOT/cloud-framework-ca-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ca/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-ca/4.18.0.0-SNAPSHOT/cloud-framework-ca-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-utils >------------------
+[INFO] Building Apache CloudStack Utils 4.18.0.0-SNAPSHOT                [6/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-utils ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-utils ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-utils ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-utils ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 175 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-utils ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 61 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-utils ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-utils ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/cloud-utils-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-utils ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:test-jar (default) @ cloud-utils ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/cloud-utils-4.18.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-utils ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/cloud-utils-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-utils/4.18.0.0-SNAPSHOT/cloud-utils-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-utils/4.18.0.0-SNAPSHOT/cloud-utils-4.18.0.0-SNAPSHOT.pom
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/utils/target/cloud-utils-4.18.0.0-SNAPSHOT-tests.jar to /root/.m2/repository/org/apache/cloudstack/cloud-utils/4.18.0.0-SNAPSHOT/cloud-utils-4.18.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --------------< org.apache.cloudstack:cloud-framework-db >--------------
+[INFO] Building Apache CloudStack Framework - Database 4.18.0.0-SNAPSHOT [7/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-db ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-db ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-db ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-db ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-db ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 44 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-db ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-db ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-db ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-db ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/target/cloud-framework-db-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-db ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-db ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/target/cloud-framework-db-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-db/4.18.0.0-SNAPSHOT/cloud-framework-db-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/db/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-db/4.18.0.0-SNAPSHOT/cloud-framework-db-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------< org.apache.cloudstack:cloud-framework-config >------------
+[INFO] Building Apache CloudStack Framework - Configuration 4.18.0.0-SNAPSHOT [8/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-config ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-config ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-config ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-config ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-config ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-config ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-config ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-config ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-config ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/target/cloud-framework-config-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-config ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-config ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/target/cloud-framework-config-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-config/4.18.0.0-SNAPSHOT/cloud-framework-config-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/config/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-config/4.18.0.0-SNAPSHOT/cloud-framework-config-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------< org.apache.cloudstack:cloud-framework-direct-download >--------
+[INFO] Building Apache CloudStack Framework - Direct Download to Primary Storage 4.18.0.0-SNAPSHOT [9/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-direct-download ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-direct-download ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-direct-download ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-direct-download ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-direct-download ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-direct-download ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-direct-download ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-direct-download ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-direct-download ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/target/cloud-framework-direct-download-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-direct-download ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-direct-download ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/target/cloud-framework-direct-download-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-direct-download/4.18.0.0-SNAPSHOT/cloud-framework-direct-download-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/direct-download/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-direct-download/4.18.0.0-SNAPSHOT/cloud-framework-direct-download-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------< org.apache.cloudstack:cloud-api >-------------------
+[INFO] Building Apache CloudStack API 4.18.0.0-SNAPSHOT                 [10/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-api ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-api ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-api ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1207 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 47 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-api ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/cloud-api-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-api ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:test-jar (default) @ cloud-api ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/cloud-api-4.18.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-api ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/cloud-api-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-api/4.18.0.0-SNAPSHOT/cloud-api-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-api/4.18.0.0-SNAPSHOT/cloud-api-4.18.0.0-SNAPSHOT.pom
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/api/target/cloud-api-4.18.0.0-SNAPSHOT-tests.jar to /root/.m2/repository/org/apache/cloudstack/cloud-api/4.18.0.0-SNAPSHOT/cloud-api-4.18.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -------------< org.apache.cloudstack:cloud-framework-rest >-------------
+[INFO] Building Apache CloudStack Framework - REST 4.18.0.0-SNAPSHOT    [11/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-rest ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-rest ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-rest ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-rest ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-rest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-rest ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-rest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-rest ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-rest ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/target/cloud-framework-rest-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-rest ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-rest ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/target/cloud-framework-rest-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-rest/4.18.0.0-SNAPSHOT/cloud-framework-rest-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/rest/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-rest/4.18.0.0-SNAPSHOT/cloud-framework-rest-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.cloudstack:cloud-framework-ipc >--------------
+[INFO] Building Apache CloudStack Framework - IPC 4.18.0.0-SNAPSHOT     [12/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-ipc ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-ipc ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-ipc ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-ipc ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-ipc ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-ipc ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-ipc ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-ipc ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-ipc ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/target/cloud-framework-ipc-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-ipc ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default) @ cloud-framework-ipc ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-ipc ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/target/cloud-framework-ipc-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-ipc/4.18.0.0-SNAPSHOT/cloud-framework-ipc-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/ipc/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-ipc/4.18.0.0-SNAPSHOT/cloud-framework-ipc-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-engine >-----------------
+[INFO] Building Apache CloudStack Cloud Engine 4.18.0.0-SNAPSHOT        [13/24]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-engine ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-engine ---
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-engine ---
+[INFO] No site descriptor found: nothing to attach.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-engine ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-engine/4.18.0.0-SNAPSHOT/cloud-engine-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------< org.apache.cloudstack:cloud-engine-api >---------------
+[INFO] Building Apache CloudStack Cloud Engine API 4.18.0.0-SNAPSHOT    [14/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-engine-api ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-engine-api ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-engine-api ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-engine-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-engine-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 101 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-engine-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-engine-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-engine-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-engine-api ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/target/cloud-engine-api-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-engine-api ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-engine-api ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/target/cloud-engine-api-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-engine-api/4.18.0.0-SNAPSHOT/cloud-engine-api-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/api/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-engine-api/4.18.0.0-SNAPSHOT/cloud-engine-api-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.cloudstack:cloud-engine-schema >--------------
+[INFO] Building Apache CloudStack Cloud Engine Schema Component 4.18.0.0-SNAPSHOT [15/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-engine-schema ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/dist (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-engine-schema ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- gmaven-plugin:1.5:execute (setproperty) @ cloud-engine-schema ---
+[INFO] 
+[INFO] --- download-maven-plugin:1.6.3:wget (download-checksums) @ cloud-engine-schema ---
+[WARNING] Ignoring download failure.
+[INFO] Downloading: https://download.cloudstack.org/systemvm/4.17/md5sum.txt
+[INFO] 708/?
+[INFO] downloaded 708
+[INFO] 
+[INFO] --- gmaven-plugin:1.5:execute (set-properties) @ cloud-engine-schema ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-engine-schema ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-engine-schema ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 118 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-engine-schema ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 794 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-engine-schema ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-engine-schema ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-engine-schema ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-engine-schema ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/target/cloud-engine-schema-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-engine-schema ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2.1:exec (systemvm-template-metadata) @ cloud-engine-schema ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-engine-schema ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/target/cloud-engine-schema-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-engine-schema/4.18.0.0-SNAPSHOT/cloud-engine-schema-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/schema/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-engine-schema/4.18.0.0-SNAPSHOT/cloud-engine-schema-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------< org.apache.cloudstack:cloud-framework-security >-----------
+[INFO] Building Apache CloudStack Framework - Security 4.18.0.0-SNAPSHOT [16/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-security ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-security ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-security ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-security ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-security ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-security ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-security ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-security ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-security ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/target/cloud-framework-security-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-security ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-security ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/target/cloud-framework-security-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-security/4.18.0.0-SNAPSHOT/cloud-framework-security-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/security/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-security/4.18.0.0-SNAPSHOT/cloud-framework-security-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------< org.apache.cloudstack:cloud-core >------------------
+[INFO] Building Apache CloudStack Core 4.18.0.0-SNAPSHOT                [17/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-core ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-core ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 36 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 460 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-core ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/target/cloud-core-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-core ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-core ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/target/cloud-core-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-core/4.18.0.0-SNAPSHOT/cloud-core-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/core/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-core/4.18.0.0-SNAPSHOT/cloud-core-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------< org.apache.cloudstack:cloud-framework-cluster >------------
+[INFO] Building Apache CloudStack Framework - Clustering 4.18.0.0-SNAPSHOT [18/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-cluster ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-cluster ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-cluster ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-cluster ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-cluster ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-cluster ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-cluster ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-cluster ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-cluster ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/target/cloud-framework-cluster-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-cluster ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-cluster ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/target/cloud-framework-cluster-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-cluster/4.18.0.0-SNAPSHOT/cloud-framework-cluster-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/cluster/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-cluster/4.18.0.0-SNAPSHOT/cloud-framework-cluster-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------< org.apache.cloudstack:cloud-framework-events >------------
+[INFO] Building Apache CloudStack Framework - Event Notification 4.18.0.0-SNAPSHOT [19/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-events ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-events ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-events ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-events ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-events ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-events ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-events ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-events ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-events ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/target/cloud-framework-events-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-events ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-events ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/target/cloud-framework-events-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-events/4.18.0.0-SNAPSHOT/cloud-framework-events-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/events/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-events/4.18.0.0-SNAPSHOT/cloud-framework-events-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.cloudstack:cloud-framework-jobs >-------------
+[INFO] Building Apache CloudStack Framework - Jobs 4.18.0.0-SNAPSHOT    [20/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-jobs ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-jobs ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-jobs ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-jobs ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-jobs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-jobs ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-jobs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-jobs ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-jobs ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/target/cloud-framework-jobs-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-jobs ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-jobs ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/target/cloud-framework-jobs-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-jobs/4.18.0.0-SNAPSHOT/cloud-framework-jobs-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/jobs/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-jobs/4.18.0.0-SNAPSHOT/cloud-framework-jobs-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------< org.apache.cloudstack:cloud-engine-components-api >----------
+[INFO] Building Apache CloudStack Cloud Engine Internal Components API 4.18.0.0-SNAPSHOT [21/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-engine-components-api ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-engine-components-api ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-engine-components-api ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-engine-components-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-engine-components-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 41 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-engine-components-api ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-engine-components-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-engine-components-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-engine-components-api ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/target/cloud-engine-components-api-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-engine-components-api ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-engine-components-api ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/target/cloud-engine-components-api-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-engine-components-api/4.18.0.0-SNAPSHOT/cloud-engine-components-api-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/components-api/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-engine-components-api/4.18.0.0-SNAPSHOT/cloud-engine-components-api-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------< org.apache.cloudstack:cloud-framework-agent-lb >-----------
+[INFO] Building Apache CloudStack Agent Management Servers Load Balancer 4.18.0.0-SNAPSHOT [22/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-framework-agent-lb ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-framework-agent-lb ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-framework-agent-lb ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-framework-agent-lb ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-framework-agent-lb ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-framework-agent-lb ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-framework-agent-lb ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-framework-agent-lb ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-framework-agent-lb ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/target/cloud-framework-agent-lb-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-framework-agent-lb ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-framework-agent-lb ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/target/cloud-framework-agent-lb-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-framework-agent-lb/4.18.0.0-SNAPSHOT/cloud-framework-agent-lb-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/framework/agent-lb/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-framework-agent-lb/4.18.0.0-SNAPSHOT/cloud-framework-agent-lb-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------< org.apache.cloudstack:cloud-engine-storage-configdrive >-------
+[INFO] Building Apache CloudStack Framework - Storage Config Drive Component 4.18.0.0-SNAPSHOT [23/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-engine-storage-configdrive ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-engine-storage-configdrive ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-engine-storage-configdrive ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-engine-storage-configdrive ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-engine-storage-configdrive ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-engine-storage-configdrive ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-engine-storage-configdrive ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-engine-storage-configdrive ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-engine-storage-configdrive ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/target/cloud-engine-storage-configdrive-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-engine-storage-configdrive ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-engine-storage-configdrive ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/target/cloud-engine-storage-configdrive-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-engine-storage-configdrive/4.18.0.0-SNAPSHOT/cloud-engine-storage-configdrive-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/engine/storage/configdrive/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-engine-storage-configdrive/4.18.0.0-SNAPSHOT/cloud-engine-storage-configdrive-4.18.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.18.0.0-SNAPSHOT              [24/24]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cloud-server ---
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target (includes = [**/*], excludes = [])
+[INFO] Deleting /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server (includes = [target, dist], excludes = [])
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+     [copy] Copying 2 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 459 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 152 source files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/test-classes
+[WARNING] Unable to autodetect 'javac' path, using 'javac' from the environment.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ cloud-server ---
+[INFO] Building jar: /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/cloud-server-4.18.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.8.2:attach-descriptor (attach-descriptor) @ cloud-server ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ cloud-server ---
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/cloud-server-4.18.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/cloudstack/cloud-server/4.18.0.0-SNAPSHOT/cloud-server-4.18.0.0-SNAPSHOT.jar
+[INFO] Installing /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/pom.xml to /root/.m2/repository/org/apache/cloudstack/cloud-server/4.18.0.0-SNAPSHOT/cloud-server-4.18.0.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache CloudStack 4.18.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache CloudStack Developer Tools - Checkstyle Configuration SUCCESS [  0.751 s]
+[INFO] Apache CloudStack .................................. SUCCESS [  0.954 s]
+[INFO] Apache CloudStack Framework - Managed Context ...... SUCCESS [  2.456 s]
+[INFO] Apache CloudStack Framework ........................ SUCCESS [  0.077 s]
+[INFO] Apache CloudStack Framework - Certificate Authority  SUCCESS [  0.670 s]
+[INFO] Apache CloudStack Utils ............................ SUCCESS [  7.001 s]
+[INFO] Apache CloudStack Framework - Database ............. SUCCESS [  3.907 s]
+[INFO] Apache CloudStack Framework - Configuration ........ SUCCESS [  2.703 s]
+[INFO] Apache CloudStack Framework - Direct Download to Primary Storage SUCCESS [  1.297 s]
+[INFO] Apache CloudStack API .............................. SUCCESS [  9.875 s]
+[INFO] Apache CloudStack Framework - REST ................. SUCCESS [  1.679 s]
+[INFO] Apache CloudStack Framework - IPC .................. SUCCESS [  3.277 s]
+[INFO] Apache CloudStack Cloud Engine ..................... SUCCESS [  0.027 s]
+[INFO] Apache CloudStack Cloud Engine API ................. SUCCESS [  3.427 s]
+[INFO] Apache CloudStack Cloud Engine Schema Component .... SUCCESS [ 14.234 s]
+[INFO] Apache CloudStack Framework - Security ............. SUCCESS [  1.683 s]
+[INFO] Apache CloudStack Core ............................. SUCCESS [  5.619 s]
+[INFO] Apache CloudStack Framework - Clustering ........... SUCCESS [  2.849 s]
+[INFO] Apache CloudStack Framework - Event Notification ... SUCCESS [  1.096 s]
+[INFO] Apache CloudStack Framework - Jobs ................. SUCCESS [  3.393 s]
+[INFO] Apache CloudStack Cloud Engine Internal Components API SUCCESS [  2.104 s]
+[INFO] Apache CloudStack Agent Management Servers Load Balancer SUCCESS [  0.605 s]
+[INFO] Apache CloudStack Framework - Storage Config Drive Component SUCCESS [  2.956 s]
+[INFO] Apache CloudStack Server ........................... SUCCESS [ 20.613 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:33 min
+[INFO] Finished at: 2024-01-07T23:20:19+06:00
+[INFO] ------------------------------------------------------------------------
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 
+
+
+
+############# Log without nondex
+
+
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ sudo mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.18.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-server ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.284 s - in com.cloud.server.StatsCollectorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.137 s
+[INFO] Finished at: 2024-01-07T23:22:23+06:00
+[INFO] ------------------------------------------------------------------------
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 
+
+
+############# Log with nondex
+
+
+
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ sudo mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.18.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cloud-server ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.284 s - in com.cloud.server.StatsCollectorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.137 s
+[INFO] Finished at: 2024-01-07T23:22:23+06:00
+[INFO] ------------------------------------------------------------------------
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.apache.cloudstack:cloud-server >-----------------
+[INFO] Building Apache CloudStack Server 4.18.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> nondex-maven-plugin:2.1.1:nondex (default-cli) > test-compile @ cloud-server >>>
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (cloudstack-checkstyle) @ cloud-server ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.3:process (default) @ cloud-server ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-resource) @ cloud-server ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 3 files to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/target/conf
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ cloud-server ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cloud-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< nondex-maven-plugin:2.1.1:nondex (default-cli) < test-compile @ cloud-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- nondex-maven-plugin:2.1.1:nondex (default-cli) @ cloud-server ---
+INFO: The original argline is: -Djava.security.egd=file:/dev/./urandom -noverify
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=.nondex
+nondexExecid=clean_2Fd6JWtZ8L4rTYCo8HhQcfIzJIoVwONHmZeQ8dkW0k8=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.421 s - in com.cloud.server.StatsCollectorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.779 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.776 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[intFreeMemoryKBs":4.0,"diskReadKBs":10.0,"memoryKBs":3.0,"entityType":"vm","diskReadIOs":12.0,"diskWriteKBs":11.0,"numCPUs":9,"vmId":2,"cpuUtilization":6.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"diskWriteIOs":13.0,"networkReadKBs":7.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:303)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:303 expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[intFreeMemoryKBs":4.0,"diskReadKBs":10.0,"memoryKBs":3.0,"entityType":"vm","diskReadIOs":12.0,"diskWriteKBs":11.0,"numCPUs":9,"vmId":2,"cpuUtilization":6.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"diskWriteIOs":13.0,"networkReadKBs":7.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY=
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=rrdgnnBd52YxFEo2BKTmyV2MVdqnPpU8p0fBvb4sZos=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.816 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.807 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[memoryKBs":3.0,"diskWriteKBs":11.0,"entityType":"vm","diskWriteIOs":13.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"diskReadKBs":10.0,"numCPUs":9,"diskReadIOs":12.0,"cpuUtilization":6.0,"vmId":2,"networkReadKBs":7.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:303)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:303 expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[memoryKBs":3.0,"diskWriteKBs":11.0,"entityType":"vm","diskWriteIOs":13.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"networkWriteKBs":8.0,"diskReadKBs":10.0,"numCPUs":9,"diskReadIOs":12.0,"cpuUtilization":6.0,"vmId":2,"networkReadKBs":7.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for rrdgnnBd52YxFEo2BKTmyV2MVdqnPpU8p0fBvb4sZos=
+INFO: Adding excluded groups to newly created one
+INFO: Adding NonDex argLine to existing argLine specified by the project
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1016066
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexJarDir=/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex
+nondexExecid=pjMA8DCGvrOODvNrdlI1r3JV3GUB1t75glGVk6D1Ms=
+nondexLogging=CONFIG
+test=
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cloud.server.StatsCollectorTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.797 s <<< FAILURE! - in com.cloud.server.StatsCollectorTest
+[ERROR] persistVirtualMachineStatsTestPersistsSuccessfully(com.cloud.server.StatsCollectorTest)  Time elapsed: 1.794 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[targetMemoryKBs":5.0,"networkReadKBs":7.0,"diskReadIOs":12.0,"networkWriteKBs":8.0,"cpuUtilization":6.0,"diskReadKBs":10.0,"intFreeMemoryKBs":4.0,"vmId":2,"entityType":"vm","diskWriteKBs":11.0,"diskWriteIOs":13.0,"numCPUs":9,"memoryKBs":3.0]}>
+        at com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully(StatsCollectorTest.java:303)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully:303 expected:<{"[vmId":2,"cpuUtilization":6.0,"networkReadKBs":7.0,"networkWriteKBs":8.0,"diskReadIOs":12.0,"diskWriteIOs":13.0,"diskReadKBs":10.0,"diskWriteKBs":11.0,"memoryKBs":3.0,"intFreeMemoryKBs":4.0,"targetMemoryKBs":5.0,"numCPUs":9,"entityType":"vm"]}> but was:<{"[targetMemoryKBs":5.0,"networkReadKBs":7.0,"diskReadIOs":12.0,"networkWriteKBs":8.0,"cpuUtilization":6.0,"diskReadKBs":10.0,"intFreeMemoryKBs":4.0,"vmId":2,"entityType":"vm","diskWriteKBs":11.0,"diskWriteIOs":13.0,"numCPUs":9,"memoryKBs":3.0]}>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Surefire failed when running tests for pjMA8DCGvrOODvNrdlI1r3JV3GUB1t75glGVk6D1Ms=
+[INFO] NonDex SUMMARY:
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=rrdgnnBd52YxFEo2BKTmyV2MVdqnPpU8p0fBvb4sZos= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexJarDir="/home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex" -DnondexExecid=pjMA8DCGvrOODvNrdlI1r3JV3GUB1t75glGVk6D1Ms= -DnondexLogging=CONFIG
+[WARNING] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] *********
+[INFO] All tests pass without NonDex shuffling
+[INFO] ####################
+[INFO] Across all seeds:
+[INFO] com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+[INFO] Test results can be found at: 
+[INFO] file:///home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex/LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY=/test_results.html
+[INFO] [NonDex] The id of this run is: LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY=
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.934 s
+[INFO] Finished at: 2024-01-07T23:23:50+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal edu.illinois:nondex-maven-plugin:2.1.1:nondex (default-cli) on project cloud-server: Unable to execute mojo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/sumon/WorkingDirectory/cloudstack-flaky-test-resolve/server/.nondex/LfuiLJ+OOAxVQHNmog468BDcaw6OCOSZpVL5tScI1cY= for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 

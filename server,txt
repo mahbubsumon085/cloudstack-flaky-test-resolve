@@ -1,0 +1,232 @@
+//        try {
+//			JSONAssert.assertEquals(expectedVmStatsStr, actual.getVmStatsData(), true);
+//		} catch (JSONException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+
+0
+
+
+https://github.com/apache/cloudstack,64262d943f012c40deac3cd87c67d44fdc727b52,server,com.cloud.server.StatsCollectorTest.persistVirtualMachineStatsTestPersistsSuccessfully,ID,,,
+
+# clone the test's repo
+    cd ~
+    git clone https://github.com/vojtechhabarta/typescript-generator
+    cd typescript-generator
+
+    # print the latest commit...
+    git rev-parse HEAD
+    # ... it's the best to work with the latest commit, but you may try an older one if needed
+    # git checkout caef58bfe55a8cd1fc5d7368c19e9ff818a7b7fa
+
+    # compile the module where the test is, and all modules it depends on...
+    mvn clean install -DskipTests -pl typescript-generator-core -am
+    # ...note that this will download A LOT of dependencies;
+    # ...if you run into compilation problems, try another Java version, search for solution online, or move to another test;
+    # ...one common problem may be other checks failing. Typically, you should be able to search on Google and find options to disable such checks, e.g., -Drat.skip, -Dlicense.skip=true, or -Dcheckstyle.skip
+
+    # run the test to check that it passes (note the change from '.' to '#')...
+    mvn -pl typescript-generator-core test -Dtest=cz.habarta.typescript.generator.TaggedUnionsTest#testTaggedUnionsWithInterfaces
+    # ...the test may have been deleted meanwhile or may not pass; if so, move to another test
+
+    # if the test passes in regular runs, see if it fails with the NonDex tool that reports flaky tests...
+    mvn -pl typescript-generator-core edu.illinois:nondex-maven-plugin:2.1.1:
+    nondex -Dtest=cz.habarta.typescript.generator.TaggedUnionsTest#testTaggedUnionsWithInterfaces
+    # ...you may need to increase the number of runs with -DnondexRuns=10 or -DnondexRuns=100
+    # ...if you get "Failed to execute goal edu.illinois:nondex-maven-plugin:2.1.1:nondex (default-cli)
+     on project typescript-generator-core: Unable to execute mojo: There are test failures.", that is GOOD 
+     s it means you found some failures
+    # ...if you get "Failed to execute goal edu.illinois:nondex-maven-plugin:2.1.1:nondex (default-cli) on 
+    project typescript-generator-core: Execution default-cli of goal edu.illinois:nondex-maven-plugin:2.1.1:nondex 
+    failed: Unsupported class 
+    file major version 61", it is BAD as it means the build failed because you have Java 17 and NOT because the test is flaky. 
+    In such cases, you should either change your Java version or move to another test
+
+
+      mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully
+
+sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1: nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully -Dmaven.surefire.debug test
+
+
+     mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#cleanUpVirtualMachineStatsTestIsEnabled
+
+sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1: nondex -Dtest=com.cloud.server.StatsCollectorTest#cleanUpVirtualMachineStatsTestIsEnabled 
+
+sudo mvn clean install -DskipTests -pl server -am -Dcheckstyle.skip
+sudo mvn -pl server  test -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully -Dcheckstyle.skip
+
+sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully -Dcheckstyle.skip
+sudo mvn -pl server edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloud.server.StatsCollectorTest#persistVirtualMachineStatsTestPersistsSuccessfully 
+
+
+
+
+   git clone https://github.com/shapeblue/cloudstack-nonoss.git nonoss
+          cd nonoss && bash -x install-non-oss.sh && cd ..
+
+          # mvn -P quality -Dsimulator -Dnoredist clean install -DskipTests org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=apache_cloudstack
+         
+        
+
+git bisect start
+        //first good commit
+          2b78b78272f79c1197e54bec7bc2ae56d51e779e
+//git bisect good
+//git bisect bad
+
+          git bisect good 2b78b78272f79c1197e54bec7bc2ae56d51e779e
+
+
+
+git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git checkout 64262d943f012c40deac3cd87c67d44fdc727b52
+Note: switching to '64262d943f012c40deac3cd87c67d44fdc727b52'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 64262d943f Merge branch '4.17'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git log --reverse
+commit 2b78b78272f79c1197e54bec7bc2ae56d51e779e
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:25 2010 -0700
+
+    Initial commit: adding .gitignore
+
+commit 05c020e1f6679edb74ef9ee513fc6240db981139
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:29 2010 -0700
+
+    Source code committed
+
+commit 9d5c1f2dcfcfe33179c2203c4e899e8220225cc8
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:29 2010 -0700
+
+    Fix build system in preparation for repo split
+
+commit ac730ec496fdf3b9d82c409210cbebcde427673b
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:42 2010 -0700
+
+    Branch 2.1.refactor committed
+
+commit df5aa16f3c7a674e29d38f31c0c8489b921e88e9
+Merge: ac730ec496 9d5c1f2dcf
+Author: Manuel Amador (Rudd-O) <rudd-o@rudd-o.com>
+Date:   Wed Aug 11 09:13:42 2010 -0700
+
+    Merge branch 'master' into 2.1.refactor
+
+commit 3318f6dcb41ca65fd565d952da0dd1cfeee1da29
+Author: Alex Huang <alex@cloud.com>
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ 
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect start
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good 2b78b78272f79c1197e54bec7bc2ae56d51e779e
+Bisecting: 17614 revisions left to test after this (roughly 14 steps)
+[df0919bef589bf44d23f9d9e056fe0da9a579034] Add placeholder network ACL list view
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 8807 revisions left to test after this (roughly 13 steps)
+[945cc0bcfbd1f797ec6c4e15099d73fc55d478d0] Aligning router chain names correctly
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 4403 revisions left to test after this (roughly 12 steps)
+[6d5c61b7bc6083594d2505a50fec9267d4250a87] Fix ajaxviewer.js to solve console on Firefox (#1655)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 2201 revisions left to test after this (roughly 11 steps)
+[f320728eddf132667c5d0acbc9389873438ff45a] update packages and dependencies
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 1100 revisions left to test after this (roughly 10 steps)
+[446337b4cccf4ef871426a432e2dbcd4c15678c1] Fix of shrinking volumes with QCOW2 format (#5225)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 549 revisions left to test after this (roughly 9 steps)
+[99313f8eae1ee1425f9c7097ccc006b50a58c532] Merge branch '4.16' into main
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 274 revisions left to test after this (roughly 8 steps)
+[3354f817eb6e2a993980f5f6e14b54947f808cef] Merge branch '4.16'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 137 revisions left to test after this (roughly 7 steps)
+[976464ccb9f7de8c5e3579d23d6247743f70e4ee] .github: enable fork-point while finding list of changes files
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 68 revisions left to test after this (roughly 6 steps)
+[17afe0510e43cc4b78c1e868dda7a5dc1c7abfb0] .github: add support for PR decoration
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[ffc914d846fa835d62264bc1337723b38bafe563] Log load bean exception (#6356)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect good
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[0f4c3af935d0acf5a17201a0015e62815e3bb6d0] cks: Fix when deployed on a nw without internet access (#6418)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[96594aec285cf6d251dc71eabb6a7c9a753dd635] Merge branch '4.16'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[a29d5d324f1cd8b34e885770a57880025b2cf444] 프라이머리 스토리지 시크릿키 누락 수정 (#6407)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[363a2cff8231a31c3c9def329805910e43358b1d] Backport: kvm: truncate vnc password to 8 chars (#6244) (#6402)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[b62b5c96e8bf2620ad2a92c05cbc5ede5c9a56ff] Prevent NPE on reboot stopped VM and startVM output with null displayname (#6397)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect bad
+b62b5c96e8bf2620ad2a92c05cbc5ede5c9a56ff is the first bad commit
+commit b62b5c96e8bf2620ad2a92c05cbc5ede5c9a56ff
+Author: Nicolas Vazquez <nicovazquez90@gmail.com>
+Date:   Fri May 20 11:31:47 2022 -0300
+
+    Prevent NPE on reboot stopped VM and startVM output with null displayname (#6397)
+    
+    * Prevent NPE on reboot stopped VM
+    
+    * Use VM UUID instead of VM ID
+    
+    * Apply suggestion
+    
+    * Refactor and fix start VM output
+    
+    * Use format instead of concatenation
+
+ engine/schema/src/main/java/com/cloud/vm/UserVmVO.java         |  5 +++++
+ .../main/java/com/cloud/api/query/dao/UserVmJoinDaoImpl.java   |  2 +-
+ server/src/main/java/com/cloud/vm/UserVmManagerImpl.java       | 10 ++++++++--
+ 3 files changed, 14 insertions(+), 3 deletions(-)
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$ git bisect reset
+Previous HEAD position was b62b5c96e8 Prevent NPE on reboot stopped VM and startVM output with null displayname (#6397)
+HEAD is now at 64262d943f Merge branch '4.17'
+sumon@sumon-Vostro-15-3510:~/WorkingDirectory/cloudstack-flaky-test-resolve$           
+
+     
+
+
+        VmStatsEntry result = statsCollector.accumulateVmMetricsStats(new ArrayList<VmStatsVO>(
+                Arrays.asList(vmStatsVoMock1, vmStatsVoMock2)));
+
+        Assert.assertEquals("vm", result.getEntityType());
+        Assert.assertEquals(1, result.getVmId());
+        Assert.assertEquals(1.0, result.getCPUUtilization(), 0);
+        Assert.assertEquals(1, result.getNumCPUs());
+        Assert.assertEquals(1.0, result.getMemoryKBs(), 0);
+        Assert.assertEquals(1.0, result.getIntFreeMemoryKBs(), 0);
+        Assert.assertEquals(1.0, result.getTargetMemoryKBs(), 0);
+        Assert.assertEquals(2.0, result.getNetworkReadKBs(), 0);
+        Assert.assertEquals(2.2, result.getNetworkWriteKBs(), 0);
+        Assert.assertEquals(4.0, result.getDiskReadKBs(), 0);
+        Assert.assertEquals(4.2, result.getDiskWriteKBs(), 0);
+        Assert.assertEquals(6.0, result.getDiskReadIOs(), 0);
+        Assert.assertEquals(6.2, result.getDiskWriteIOs(), 0);
