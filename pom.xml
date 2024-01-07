@@ -112,6 +112,7 @@
         <cs.junit.dataprovider.version>1.13.1</cs.junit.dataprovider.version>
         <cs.guava-testlib.version>18.0</cs.guava-testlib.version>
         <cs.mockito.version>3.2.4</cs.mockito.version>
+        <cs.skyscreamer.version>1.5.0</cs.skyscreamer.version>
         <cs.powermock.version>2.0.5</cs.powermock.version>
         <cs.selenium.server.version>1.0-20081010.060147</cs.selenium.server.version>
         <cs.selenium-java-client-driver.version>1.0.1</cs.selenium-java-client-driver.version>
@@ -715,6 +716,15 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>${cs.skyscreamer.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>com.tngtech.java</groupId>
             <artifactId>junit-dataprovider</artifactId>
@@ -772,6 +782,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                 <!-- Other configurations -->
+                         <failOnViolation>true</failOnViolation>
+                </configuration>
                 <executions>
                     <execution>
                         <id>cloudstack-checkstyle</id>

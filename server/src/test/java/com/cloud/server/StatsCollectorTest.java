@@ -35,6 +35,7 @@ import org.influxdb.InfluxDBFactory;
 import org.influxdb.dto.BatchPoints;
 import org.influxdb.dto.BatchPoints.Builder;
 import org.influxdb.dto.Point;
+import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,6 +48,7 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.modules.junit4.PowerMockRunnerDelegate;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 import com.cloud.agent.api.VmDiskStatsEntry;
 import com.cloud.agent.api.VmStatsEntry;
@@ -300,7 +302,12 @@ public class StatsCollectorTest {
         VmStatsVO actual = vmStatsVOCaptor.getAllValues().get(0);
         Assert.assertEquals(Long.valueOf(2L), actual.getVmId());
         Assert.assertEquals(Long.valueOf(1L), actual.getMgmtServerId());
-        Assert.assertEquals(expectedVmStatsStr, actual.getVmStatsData());
+        try {
+            JSONAssert.assertEquals(expectedVmStatsStr, actual.getVmStatsData(), true);
+        } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         Assert.assertEquals(timestamp, actual.getTimestamp());
     }
 
